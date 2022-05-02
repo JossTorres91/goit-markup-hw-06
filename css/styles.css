@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Roboto',
-        sans-serif;
+    sans-serif;
     width: 1600px;
     box-sizing: border-box;
 }
@@ -40,7 +40,8 @@ h2,
 .findus span,
 .wedopic div span,
 .title,
-.titleb {
+.titleb,
+.modalcontent button {
     font-weight: 700;
 }
 
@@ -107,7 +108,8 @@ address p,
 .filter button:hover,
 .filter button:focus,
 .findus span,
-.wedopic div span {
+.wedopic div span,
+.modalcontent button {
     color: #fff;
 }
 
@@ -119,14 +121,16 @@ address p,
 }
 
 .servicebtn,
-.category {
+.category,
+.modalcontent button {
     line-height: 1.88;
 }
 
 .filter button,
 .servicebtn,
 .clientsicon div,
-.clientsicon div:hover {
+.clientsicon div:hover,
+.modalcontent button {
     font-family: 'Roboto',
         sans-serif;
 }
@@ -134,7 +138,8 @@ address p,
 .filter button,
 .servicebtn,
 .clientsicon div,
-.clientsicon div:hover{
+.clientsicon div:hover,
+.modalcontent button{
     border-radius: 4px;
 }
 
@@ -164,7 +169,8 @@ address p,
 .position,
 .filter button,
 .category,
-.titleb {
+.titleb,
+.modalcontent button {
     font-size: 16px;
 }
 
@@ -186,7 +192,8 @@ h2,
 .webs,
 .findus span,
 .clients h2,
-.wedopic div span {
+.wedopic div span,
+.modalcontent h2 {
     line-height: 1.17;
 }
 
@@ -217,7 +224,9 @@ address p,
 .ourteamicons a:hover,
 .footericons a:hover,
 .clientsicon div,
-.clientsicon div:hover{
+.clientsicon div:hover,
+.close,
+.modalcontent button{
     cursor: pointer;
 }
 
@@ -241,7 +250,8 @@ address p,
 .filter button:focus,
 .servicebtn,
 .ourteamicons a:hover,
-.footericons a:hover {
+.footericons a:hover,
+.modalcontent button {
     background-color: #2196F3;
 }
 
@@ -284,7 +294,8 @@ footer,
 .close,
 .row1,
 .row2,
-.row3 {
+.row3,
+.modalcontent {
     display: flex;
 }
 
@@ -338,7 +349,8 @@ footer,
 .clientsicon div,
 .clientsicon div:hover,
 .backdrop,
-.close {
+.close,
+.modalcontent {
     align-items: center;
 }
 
@@ -370,7 +382,8 @@ main,
 .solutions,
 .clients,
 .findus,
-.wedopic div {
+.wedopic div,
+.modalcontent {
     flex-direction: column;
 }
 
@@ -587,7 +600,6 @@ address p {
     top: -70px;
 }
 .wedopic div span,
-.close,
 .figdata div,
 .window{
     position: relative;
@@ -651,8 +663,9 @@ address p {
     width: 30px;
     height: 30px;
     border: 1px solid #0000001a;
-    left: 490px;
+    position: relative;
     top: 8px;
+    right: -490px;
 }
 .icon-vector {
     fill: #000;
@@ -693,3 +706,117 @@ address p {
 .portimg:hover .window{
     transform: translateY(-298px);
 }
+.modalcontent h2{
+    font-size: 20px;
+}
+.modalcontent button{
+    width: 200px;
+    height: 50px;
+    padding: 10px 75px;
+    border: none;
+    margin-top: 10px;
+}
+.modalform{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.modalcontent{
+    padding: 17px 40px 40px 40px;
+    position: relative;
+}
+.modalcontent label{
+    font-family: 'Roboto',
+    sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    color: #757575;
+}
+#clientcomment{
+    width: 448px;
+    height: 120px;
+    resize: none;
+    font-family: 'Roboto',
+    sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    padding: 12px 16px;
+    color: #75757580;
+    outline: none;
+    cursor: pointer;
+}
+.modalcontent input{
+    width: 448px;
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.modalform input:focus,
+.modalform textarea:focus,
+.modalform input:hover,
+.modalform textarea:hover{
+border: 1px solid #2196F3;
+}
+.suscription{
+    display: flex;
+    margin-left: 93px;
+}
+.suscform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 12px;
+}
+.suscform label{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.suscform input{
+    width: 358px;
+    height: 50px;
+    outline: none;
+    border: 1px solid #ffffff4d;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: hsl(0, 0%, 0%, 0%);
+    color: #ffffff99;
+    padding-left: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    font-family: 'Roboto',
+    sans-serif;
+    cursor: pointer;
+}
+.icon-send{
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+    margin-left: 20px;
+}
+.suscribe{
+    width: 200px;
+    height: 50px;
+    background-color: #2196F3;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-family: 'Roboto',
+    sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 36px;
+    cursor: pointer;
+}
+

@@ -25,6 +25,24 @@
             <use xlink:href="images/icons.svg#icon-vector"></use>
           </svg>
         </button>
+        <div class="modalcontent">
+          <h2>Deje sus datos, nos contactaremos con usted</h2>
+          <form name="modalform" class="modalform" autocomplete="off">
+            <label for="clientname">Nombre</label>
+            <input type="text" name="name" id="clientname" />
+            <label for="clientphone">Teléfono</label>
+            <input type="tel" name="phone" id="clientphone" />
+            <label for="clientmail">E-mail</label>
+            <input type="email" name="email" id="clientmail" />
+            <label for="clientcomment">Comentarios</label>
+            <textarea
+              id="clientcomment"
+              name="comment"
+              placeholder="Introduzca el texto"
+            ></textarea>
+          </form>
+          <button type="submit">Enviar</button>
+        </div>
       </div>
     </div>
     <header>
@@ -366,6 +384,18 @@
             </svg>
           </a>
         </div>
+      </div>
+      <div class="suscription">
+        <form name="susform" class="suscform" autocomplete="off">
+          <label for="suscmail">SUSCRÍBASE AL BOLETÍN INFORMATIVO </label>
+          <input type="mail" name="suscmail" placeholder="Correo electrónico" />
+        </form>
+        <button type="submit" class="suscribe">
+          Suscríbase
+          <svg class="icon-send">
+            <use xlink:href="images/icons.svg#icon-send"></use>
+          </svg>
+        </button>
       </div>
     </footer>
     <script src="./js/modal.js"></script>
