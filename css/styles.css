@@ -657,7 +657,6 @@ address p {
 }
 .modal {
     width: 528px;
-    height: 581px;
 }
 .close {
     width: 30px;
@@ -708,6 +707,7 @@ address p {
 }
 .modalcontent h2{
     font-size: 20px;
+    margin-bottom: 12px;
 }
 .modalcontent button{
     width: 200px;
@@ -732,33 +732,7 @@ address p {
     font-size: 12px;
     line-height: 1.17;
     color: #757575;
-}
-#clientcomment{
-    width: 448px;
-    height: 120px;
-    resize: none;
-    font-family: 'Roboto',
-    sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.17;
-    padding: 12px 16px;
-    color: #75757580;
-    outline: none;
-    cursor: pointer;
-}
-.modalcontent input{
-    width: 448px;
-    height: 40px;
-    outline: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-.modalform input:focus,
-.modalform textarea:focus,
-.modalform input:hover,
-.modalform textarea:hover{
-border: 1px solid #2196F3;
+    margin-bottom: 4px;
 }
 .suscription{
     display: flex;
@@ -777,7 +751,7 @@ border: 1px solid #2196F3;
     color: #fff;
     margin-bottom: 20px;
 }
-.suscform input{
+.suscmail{
     width: 358px;
     height: 50px;
     outline: none;
@@ -785,13 +759,7 @@ border: 1px solid #2196F3;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: hsl(0, 0%, 0%, 0%);
-    color: #ffffff99;
     padding-left: 16px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
-    font-family: 'Roboto',
-    sans-serif;
     cursor: pointer;
 }
 .icon-send{
@@ -819,4 +787,129 @@ border: 1px solid #2196F3;
     margin-top: 36px;
     cursor: pointer;
 }
-
+.comment::placeholder{
+    font-family: 'Roboto',
+    sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    color: #75757580;
+}
+.suscmail::placeholder{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    font-family: 'Roboto',
+    sans-serif;
+    color: #ffffff99;
+}
+.agree p{
+    font-family: 'Roboto',
+    sans-serif;
+    font-weight: 400;
+    font-style: 14px;
+    line-height: 1.71;
+    color: #757575;
+}
+.agree{
+    display: flex;
+    margin-top: 20px;
+}
+.icon-square{
+    width: 16px;
+    height: 15px;
+}
+.icon-check{
+    width: 11px;
+    height: 18px;
+    fill: #fff;
+}
+.check.hidden{
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+.check{
+    width: 16px;
+    height: 16px;
+    background-color: #2196F3;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -20px;
+}
+.agreeicon{
+    padding: 6px 7px 0px 13px;
+}
+#check:target{
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+}
+.icon-person{
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: -26px;
+    left: 15px;
+}
+#clientname,
+#clientphone,
+#clientmail{
+    outline: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+    background-color: hsl(0, 0%, 0%, 0%);
+    padding-left: 42px;
+    width: 448px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#clientcomment{
+    outline: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    width: 448px;
+    height: 120px;
+    resize: none;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+#clientname:focus,
+#clientphone:focus,
+#clientmail:focus,
+#clientcomment:focus{
+    border: 1px solid #2196F3;
+    border-radius: 4px;
+}
+.name:focus-within,
+.phone:focus-within,
+.email:focus-within{
+    fill: #2196F3;
+}
+.name,.phone,.email{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    margin: 0px;
+}
+.icon-phone{
+    width: 13px;
+    height: 13px;
+    position: relative;
+    top: -26.5px;
+    left: 14.27px;
+}
+.icon-mail{
+    width: 15px;
+    height: 12px;
+    position: relative;
+    top: -26px;
+    left: 13.5px;
+}

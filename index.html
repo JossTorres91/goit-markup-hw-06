@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal id="backdrop">
       <div class="modal">
         <button data-modal-close class="close">
           <svg class="icon-vector">
@@ -28,19 +28,53 @@
         <div class="modalcontent">
           <h2>Deje sus datos, nos contactaremos con usted</h2>
           <form name="modalform" class="modalform" autocomplete="off">
-            <label for="clientname">Nombre</label>
-            <input type="text" name="name" id="clientname" />
-            <label for="clientphone">Teléfono</label>
-            <input type="tel" name="phone" id="clientphone" />
-            <label for="clientmail">E-mail</label>
-            <input type="email" name="email" id="clientmail" />
+            <div class="name">
+              <label for="clientname">Nombre</label>
+              <input type="text" name="name" id="clientname" />
+              <svg class="icon-person">
+                <use xlink:href="images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+            <div class="phone">
+              <label for="clientphone">Teléfono</label>
+              <input type="tel" name="phone" id="clientphone" />
+              <svg class="icon-phone">
+                <use xlink:href="images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+            <div class="email">
+              <label for="clientmail">E-mail</label>
+              <input type="email" name="email" id="clientmail" />
+              <svg class="icon-mail">
+                <use xlink:href="images/icons.svg#icon-mail"></use>
+              </svg>
+            </div>
             <label for="clientcomment">Comentarios</label>
             <textarea
               id="clientcomment"
               name="comment"
               placeholder="Introduzca el texto"
+              class="comment"
             ></textarea>
           </form>
+          <div class="agree">
+            <div class="agreeicon">
+              <a href="#check">
+                <svg class="icon-square">
+                  <use xlink:href="images/icons.svg#icon-square"></use>
+                </svg>
+              </a>
+              <a href="#backdrop" id="check" class="check hidden">
+                <svg class="icon-check">
+                  <use xlink:href="images/icons.svg#icon-check"></use>
+                </svg>
+              </a>
+            </div>
+            <p>
+              Estoy de acuerdo con el boletín informativo y acepto los Términos
+              y Condiciones
+            </p>
+          </div>
           <button type="submit">Enviar</button>
         </div>
       </div>
@@ -388,7 +422,8 @@
       <div class="suscription">
         <form name="susform" class="suscform" autocomplete="off">
           <label for="suscmail">SUSCRÍBASE AL BOLETÍN INFORMATIVO </label>
-          <input type="mail" name="suscmail" placeholder="Correo electrónico" />
+          <input type="mail" name="suscmail" id:="suscmail" placeholder="E-mail"
+          class="suscmail"/>
         </form>
         <button type="submit" class="suscribe">
           Suscríbase
